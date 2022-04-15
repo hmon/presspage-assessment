@@ -1,18 +1,21 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <div class="mx-auto max-w-max my-6">
+      <img
+        alt="PressPage"
+        width="300"
+        src="https://www.presspage.com/images/logo_presspage.svg"
+      />
+    </div>
+
+    <router-link :to="{ name: 'users'}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      Users
+    </router-link>
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import { Vue } from 'vue-class-component'
 
-@Options({
-  components: {
-    HelloWorld,
-  },
-})
 export default class HomeView extends Vue {}
 </script>
